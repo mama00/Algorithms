@@ -1,7 +1,6 @@
 #Author: Marceus Jethro
 #Implementation of QuickSort with average  time complexity of O(nlogn) and also with space complexity of
-#O(nlogn)
-
+#O(n) in best cast and O(n^2) in worst case
 #note that if you use the Partition fonction instead your space complexity will shrink
 #to a constant but your time complexity will grow
 #feel free to contact me if you detect any bugs
@@ -19,7 +18,9 @@ def Partition(A,pivot_index,left_index,right_index):
     A[correct_place-1],A[pivot_index]=A[pivot_index],A[correct_place-1]
     return correct_place-1
 
-#partitioning around any element but this use a space complexity of O(nlogn)
+#partitioning around any element but this use a worst case space complexity of O(n^2)
+#and a best case space complexity of O(n) but i have the feeling its on average O(n) :D
+#probably could be optimized 
 def PartitionAny(A,pivot_index,left_index,right_index):
     copy=A[left_index:right_index+1]
     i=left_index
