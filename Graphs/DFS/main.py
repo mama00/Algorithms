@@ -1,5 +1,5 @@
 #Author Marceus Jethro
-#implementation of a deep first search algorithm
+#implementation of a depth first search algorithm
 def DFS(graph,start):
     viewed=[start]
     dfs_sub(viewed,graph,start)
