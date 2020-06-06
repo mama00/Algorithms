@@ -8,6 +8,7 @@
 
 
 import random
+import time
 #partitioning around the element A[leftIndex]
 def Partition(A,pivot_index,left_index,right_index):
     correct_place=left_index+1
@@ -52,9 +53,10 @@ def runAlgo(Array):
     left_index=0
     right_index=lenA-1
     quickSort(Array,left_index,right_index,lenA)
-    print(Array)
     
 #test
-array=[2,333,35,53,35,33,5,23,53,55,66,23,756,23,2345,43,987,564,77,87,343,234,56,7687,9987,345,754,4637,245,654]
+array=random.sample(range(1, 100000000), 10000000)
+start=time.time()
 runAlgo(array)
+print(time.time()-start)
             

@@ -1,6 +1,8 @@
 #Author: Marceus Jethro
 #Implementation of Merge sort algorithm
 #feel free to contact me if you detect any bugs
+import time
+import random
 def merge(a, b,lenA,lenB):
     mergedList=[]
     i=0
@@ -27,7 +29,9 @@ def mergeSort(A,lenA):
     return merge(firstPart,secondPart,int(lenA/2),int(lenA/2 + lenA % 2))
 
 #test
-array=[2,333,35,53,35,33,5,23,53,55,66,23,756,23,43,987,564,77,87]
-print(mergeSort(array,int(len(array))))            
+array=random.sample(range(1, 100000000), 10000000)
+start=time.time()
+mergeSort(array,int(len(array)))            
+print(time.time()-start)
             
     
